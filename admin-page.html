@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | PrenatalAtlas</title>
+  <link rel="stylesheet" href="adminstyl.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo" />
+      <span>PrenatalAtlas Admin</span>
+    </div>
+    <nav class="menu-bar">
+      <ul>
+        <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-database"></i> Access Records</a></li>
+        <li><a href="#" id="inbox-btn"><i class="fa fa-inbox"></i> Inbox</a></li>
+        <li><a href="#" id="dashboard-btn"><i class="fa fa-chart-line"></i> Reports</a></li>
+        <li><a href="index.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-dashboard">
+    <section class="dashboard-section">
+      <h2>Recent Activities</h2>
+      <ul>
+        <li>User John Doe uploaded a file.</li>
+        <li>Dr. Smith granted lifetime access to patient records.</li>
+        <li>System maintenance completed at 3:00 AM.</li>
+      </ul>
+    </section>
+
+    <section class="dashboard-section">
+      <h2>Life Access Grants</h2>
+      <ul>
+        <li>Jane Doe → Dr. Adams (Expires: Never)</li>
+        <li>Maria Gonzalez → Dr. Patel (Expires: 2025-12-31)</li>
+      </ul>
+    </section>
+
+    <section class="dashboard-section">
+      <h2>Uploaded Files</h2>
+      <ul>
+        <li>Ultrasound_Report_0405.pdf</li>
+        <li>Blood_Test_Results_0401.pdf</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Inbox Modal -->
+<div id="inbox-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn inbox-close-btn">&times;</span>
+      <h2>Inbox</h2>
+      <ul class="messages-list">
+        <li><strong>Dr. Patel:</strong> Uploaded ultrasound reports.</li>
+        <li><strong>Support:</strong> Scheduled maintenance notice.</li>
+      </ul>
+  
+      <div class="compose-mail">
+        <h3>Compose Mail</h3>
+        <input type="text" placeholder="To..." />
+        <input type="text" placeholder="Subject..." />
+        <textarea placeholder="Message..."></textarea>
+        <button>Send</button>
+      </div>
+  
+      <div class="delete-mail">
+        <h3>Delete Mail</h3>
+        <button class="delete-btn">Delete Selected</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Dashboard Modal -->
+  <div id="dashboard-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn dashboard-close-btn">&times;</span>
+      <h2>Admin Dashboard</h2>
+      
+      <div class="dashboard-reports">
+        <h3>Uploaded Reports</h3>
+        <ul>
+          <li>Ultrasound_March2025.pdf</li>
+          <li>CheckupNotes_April2025.docx</li>
+        </ul>
+      </div>
+  
+      <div class="upload-report">
+        <h3>Upload New Report</h3>
+        <input type="file" />
+        <button class="upload-btn">Upload</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer>
+    <p>&copy; 2025 PrenatalAtlas Admin Panel</p>
+  </footer>
+
+  <script src="adminscript.js"></script>
+</body>
+</html>

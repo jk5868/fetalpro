@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrenatalAtlas</title>
+  <link rel="stylesheet" href="styledoc.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo" />
+      <span>PrenatalAtlas</span>
+    </div>
+    <nav class="menu-bar">
+      <ul>
+        <li><a href="#" id="inbox-btn"><i class="fa fa-inbox"></i> Inbox</a></li>
+        <li><a href="#"><i class="fa fa-user-injured"></i> Patients</a></li>
+        <li><a href="#"><i class="fa fa-graduation-cap"></i> Training</a></li>
+        <li><a href="#"><i class="fa fa-headset"></i> Support</a></li>
+        <li><a href="#"><i class="fa fa-info-circle"></i> About Us</a></li>
+        <li><a href="#" id="logout-btn"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <h2>Recent Acivity</h2>
+    <div class="patient-cards">
+      <div class="patient-card">
+        <h3>Jane Doe</h3>
+        <p><strong>Visit:</strong> Prenatal Checkup</p>
+        <p><strong>Doctor:</strong> Dr. Smith</p>
+        <p><strong>Date:</strong> April 5, 2025</p>
+      </div>
+
+      <div class="patient-card" id="maria-card">
+        <h3>Maria Gonzalez</h3>
+        <p><strong>Visit:</strong> Ultrasound Session</p>
+        <p><strong>Doctor:</strong> Dr. Patel</p>
+        <p><strong>Date:</strong> April 4, 2025</p>
+      </div>
+
+      <div class="patient-card">
+        <h3>Linda Park</h3>
+        <p><strong>Visit:</strong> Lab Test Review</p>
+        <p><strong>Doctor:</strong> Dr. Johnson</p>
+        <p><strong>Date:</strong> April 3, 2025</p>
+      </div>
+
+      <div class="patient-card">
+        <h3>Alex Turner</h3>
+        <p><strong>Visit:</strong> First Trimester Scan</p>
+        <p><strong>Doctor:</strong> Dr. Taylor</p>
+        <p><strong>Date:</strong> April 2, 2025</p>
+      </div>
+
+      <div class="patient-card">
+        <h3>Sophia Lee</h3>
+        <p><strong>Visit:</strong> Genetic Counseling</p>
+        <p><strong>Doctor:</strong> Dr. Adams</p>
+        <p><strong>Date:</strong> April 1, 2025</p>
+      </div>
+
+      <div class="patient-card">
+        <h3>Emma Brown</h3>
+        <p><strong>Visit:</strong> Routine Check-up</p>
+        <p><strong>Doctor:</strong> Dr. Wang</p>
+        <p><strong>Date:</strong> March 30, 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tableau Modal -->
+  <div id="reports-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn reports-close-btn">&times;</span>
+      <h2>Interactive Report Dashboard</h2>
+      <div class='tableauPlaceholder' id='viz1744828499664' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Pa/Patient-1/Dashboard1/1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='Patient-1/Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Pa/Patient-1/Dashboard1/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inbox Modal -->
+  <div id="inbox-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Inbox</h2>
+
+      <div class="inbox-actions">
+        <button id="toggle-compose"><i class="fa fa-pen"></i> Compose</button>
+      </div>
+
+      <form id="compose-form" style="display: none;">
+        <input type="text" id="compose-to" placeholder="To" required />
+        <input type="text" id="compose-subject" placeholder="Subject" required />
+        <textarea id="compose-body" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <ul class="messages-list" id="messages-list">
+        <li><strong>John Doe:</strong> Your appointment is confirmed for April 10th. <span class="delete-mail">&times;</span></li>
+        <li><strong>Mary Lane:</strong> Updated prenatal care guidelines are available. <span class="delete-mail">&times;</span></li>
+        <li><strong>Support:</strong> New support ticket opened for your review. <span class="delete-mail">&times;</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; PrenatalAtlas. All rights reserved.</p>
+  </footer>
+
+  <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+  <script src="docscript.js"></script>
+</body>
+</html>

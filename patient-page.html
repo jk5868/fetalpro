@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Portal | PrenatalAtlas</title>
+  <link rel="stylesheet" href="patient-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Logo.jpg" alt="Logo"/>
+      <span>PrenatalAtlas</span>
+    </div>
+    <nav class="menu-bar">
+      <ul>
+        <li><a href="#" id="reports-btn"><i class="fa fa-file-medical"></i> My Reports</a></li>
+        <li><a href="#" id="video-btn"><i class="fa fa-video"></i> Video Reports</a></li>
+        <li><a href="#" id="inbox-btn"><i class="fa fa-inbox"></i> Inbox</a></li>
+        <li><a href="#"><i class="fa fa-info-circle"></i> About Us</a></li>
+        <li><a href="index.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main class="patient-dashboard">
+    <section class="welcome-section">
+      <h2>Welcome, Jane Doe</h2>
+      <p>Your next appointment is scheduled for April 28th at 10:00 AM.</p>
+    </section>
+
+    <section class="reports-section" id="reports-section">
+      <h3>Recent Reports</h3>
+      <ul>
+        <li>Ultrasound_March2025.pdf</li>
+        <li>BloodResults_April2025.pdf</li>
+      </ul>
+     
+  </main>
+
+  <div id="reports-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn reports-close-btn">&times;</span>
+      <h2>Interactive Report Dashboard</h2>
+      <div class='tableauPlaceholder' id='viz1744828499664' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Pa/Patient-1/Dashboard1/1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='Patient-1/Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Pa/Patient-1/Dashboard1/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1744828499664');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = '100%';
+          vizElement.style.height = '100vh'; 
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width = '100%';
+          vizElement.style.height = '90vh'; 
+        } else {
+          vizElement.style.width = '100%';
+          vizElement.style.height = '100vh';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div>
+  </div>
+  <div id="video-modal" class="modal">
+    <div class="modal-content video-modal-content">
+      <span class="close-btn video-close-btn">&times;</span>
+      <h2>Video Reports</h2>
+      
+      <div class="video-grid">
+        <div class="video-wrapper">
+          <h4>20 Weeks 5 Days</h4>
+          <video controls width="400" height="250">
+            <source src="C:\Users\marka\OneDrive\Desktop\fetal pro\20 weeks 5 days Baby.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <div class="video-wrapper">
+          <h4>Fetal Movement</h4>
+          <video controls width="400" height="250">
+            <source src="C:\Users\marka\OneDrive\Desktop\fetal pro\videoplayback.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="inbox-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn inbox-close-btn">&times;</span>
+      <h2>Inbox</h2>
+      <ul class="messages-list">
+        <li>Message 1: Test message content here...</li>
+        <li>Message 2: Another test message...</li>
+        <li>Message 3: You have a new report available!</li>
+      </ul>
+
+      
+      <button id="compose-btn" class="compose-btn">Compose</button>
+
+      
+      <div id="compose-form" class="compose-form" style="display: none;">
+        <h3>Compose Mail</h3>
+        <form id="composeMailForm">
+          <input type="email" id="recipient" placeholder="Recipient Email" required />
+          <textarea id="messageContent" placeholder="Write your message here..." rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PrenatalAtlas Patient Portal</p>
+  </footer>
+
+  <script src="patient-script.js"></script>
+</body>
+</html>
