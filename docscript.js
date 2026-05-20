@@ -47,7 +47,7 @@ document.getElementById("logout-btn").addEventListener("click", function (e) {
   window.location.href = "index.html";
 });
 
-// Maria Gonzalez Tableau Modal
+// Maria Gonzalez Tableau Model updated
 const mariaCard = document.getElementById('maria-card');
 const reportsModal = document.getElementById('reports-modal');
 const reportsCloseBtn = document.querySelector('.reports-close-btn');
